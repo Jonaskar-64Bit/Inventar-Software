@@ -11,7 +11,7 @@
         <h1>Willkommen zur Inventar-Software</h1>
     </header>
 
-    <button>Neuen Gegenstand hinzufügen</button>
+    <button id="new-item-btn">Neuen Gegenstand hinzufügen</button>
 
     <main>
         <section id="inventory-section">
@@ -24,12 +24,12 @@
             <h2>Gegenstand hinzufügen</h2>
             <form id="add-item-form">
                 <label for="item-name">Name des Gegenstands:</label>
-                <input type="text" id="item-name" name="item-name" required>
+                <input type="text" id="item-name" name="item-name">
                 
                 <label for="item-quantity">Menge:</label>
-                <input type="number" id="item-quantity" name="item-quantity" required>
+                <input type="number" id="item-quantity" name="item-quantity">
                 
-                <button type="submit">Hinzufügen</button>
+                <button type="button" id="add-item-btn">Hinzufügen</button>
                 <br>
                 <p id="errorField"></p>
             </form>
