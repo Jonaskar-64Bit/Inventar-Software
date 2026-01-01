@@ -6,7 +6,6 @@ const errorField = document.getElementById('errorField');
 const newItemButton = document.getElementById('new-item-btn');
 const contrastToggle = document.getElementById('contrast-toggle');
 const contrastToggleLight = document.getElementById('contrast-toggle-light');
-const newItemButton = document.getElementById('new-item-btn');
 const addItemSection = document.getElementById('add-item-section');
 
 
@@ -136,16 +135,15 @@ contrastToggle.addEventListener("click", enableDarkMode);
 contrastToggleLight.addEventListener("click", enableLightMode);
 
 newItemButton.addEventListener('click', () => {
-    // Toggle: Wenn versteckt → zeigen, wenn sichtbar → verstecken
-    if (addItemSection.style.display === 'none') {
-        addItemSection.style.display = 'block';
-        // Optional: Button-Text ändern
-        newItemButton.textContent = 'Gegenstand hinzufügen abbrechen';
+    addItemSection.classList.toggle('show');
+
+    if (addItemSection.classList.contains('show')) {
+        newItemButton.textContent = 'Gegenstand hinzufügen schließen';
     } else {
-        addItemSection.style.display = 'none';
         newItemButton.textContent = 'Neuen Gegenstand hinzufügen';
     }
 });
+
 
 
 // Beim Laden gespeichertes Theme anwenden
