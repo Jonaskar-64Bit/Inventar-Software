@@ -14,10 +14,25 @@
     <button>Neuen Gegenstand hinzufügen</button>
 
     <main>
-        <section>
+        <section id="inventory-section">
             <h2>Inventarliste</h2>
             <ul id="inventory-list">
             </ul>
+        </section>
+
+        <section id="add-item-section">
+            <h2>Gegenstand hinzufügen</h2>
+            <form id="add-item-form">
+                <label for="item-name">Name des Gegenstands:</label>
+                <input type="text" id="item-name" name="item-name" required>
+                
+                <label for="item-quantity">Menge:</label>
+                <input type="number" id="item-quantity" name="item-quantity" required>
+                
+                <button type="submit">Hinzufügen</button>
+                <br>
+                <p id="errorField"></p>
+            </form>
         </section>
     </main>
 
