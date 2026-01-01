@@ -16,6 +16,7 @@ function renderInventory() {
   inventoryItems.forEach(item => {
     const listItem = document.createElement('li');
     listItem.textContent = `${item.name} - Menge: ${item.quantity}`;
+    listItem.dataset.id = item.id;
     inventoryList.appendChild(listItem);
   });
 }
@@ -69,3 +70,6 @@ if (localStorage.getItem("theme") === "dark") {
 } else {
   enableLightMode();
 }
+
+// Inventar direkt nach dem Laden rendern
+renderInventory();
