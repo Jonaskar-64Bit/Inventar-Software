@@ -1,0 +1,127 @@
+/* ============================================================
+   legal.css – Styling für Impressum & Datenschutz
+============================================================ */
+
+/* ===================== Basis ===================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* Light Mode Hintergrund */
+    color: #111111;      /* Light Mode Text */
+    transition: background 0.25s ease, color 0.25s ease;
+    line-height: 1.6;
+}
+
+.container, main, section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* ===================== Header ===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e1e1e1;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #cccccc;
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+header img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* ===================== Hauptbereich ===================== */
+h1, h2 {
+    color: #203a43;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== Footer ===================== */
+footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: #111111;
+    background: #e1e1e1;
+    border-top: 2px solid #cccccc;
+    font-size: 0.9rem;
+}
+
+/* Footer-Text */
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer-Links unter dem Text */
+footer a {
+    display: block;       /* Links untereinander */
+    color: #0066ff;
+    margin: 0.2rem 0;     /* Abstand zwischen Links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== Dark Mode ===================== */
+body.dark-mode {
+    background: #1a1a1a;
+    color: #e2e2e2;
+}
+
+body.dark-mode header {
+    background: #272727;
+    border-bottom: 2px solid #444444;
+}
+
+body.dark-mode footer {
+    background: #272727;
+    border-top: 2px solid #444444;
+    color: #e2e2e2;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode a, body.dark-mode footer a {
+    color: #3f6bff;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 600px) {
+    header, footer, main {
+        padding: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

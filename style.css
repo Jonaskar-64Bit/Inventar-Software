@@ -176,3 +176,8 @@ li img:hover {
     max-height: 500px; /* ausreichend groß, um alles anzuzeigen */
 }
 
+#new-item-btn {
+    margin-left: 1rem; /* verschiebt den Button nach rechts */
+    margin-top: 1rem;  /* optional, Abstand nach oben */
+    padding: 10px 18px; /* optional, etwas größere Fläche für Klick */
+}
