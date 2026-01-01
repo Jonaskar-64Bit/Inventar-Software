@@ -4,6 +4,8 @@ const itemNameInput = document.getElementById('item-name');
 const itemQuantityInput = document.getElementById('item-quantity');
 const errorField = document.getElementById('errorField');
 const newItemButton = document.getElementById('new-item-btn');
+const contrastToggle = document.getElementById('contrast-toggle');
+const contrastToggleLight = document.getElementById('contrast-toggle-light');
 
 // Array für Inventar, aus localStorage laden oder leer starten
 let inventoryItems = JSON.parse(localStorage.getItem('inventoryItems')) || [];
