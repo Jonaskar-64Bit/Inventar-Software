@@ -1,4 +1,6 @@
-/* ---------- CSS Variables (Default – Light Mode) ---------- */
+/* ============================================================
+   Farbvariablen – Basis Theme (Light)
+   ============================================================ */
 :root {
   --bg: #ffffff;
   --text: #111111;
@@ -9,7 +11,9 @@
   --border: #cccccc;
 }
 
-/* ---------- Dark Mode ---------- */
+/* ============================================================
+   Dark Mode – wird aktiv wenn <body class="dark-mode">
+   ============================================================ */
 body.dark-mode {
   --bg: #1a1a1a;
   --text: #e2e2e2;
@@ -20,22 +24,34 @@ body.dark-mode {
   --border: #444444;
 }
 
-/* ---------- Page Layout ---------- */
+/* ============================================================
+   Grundlayout
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, sans-serif;
   transition: background .25s ease, color .25s ease;
-  margin: 0;
-  padding: 0;
+  padding-bottom: 3rem;
 }
 
 header {
   background: var(--header-bg);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid var(--border);
+}
+
+header h1 {
+  font-size: 1.6rem;
 }
 
 header img {
@@ -44,15 +60,64 @@ header img {
   cursor: pointer;
 }
 
+/* ============================================================
+   Inventar-Bereich
+   ============================================================ */
+main {
+  padding: 1rem;
+}
+
 section {
   background: var(--card-bg);
   padding: 1.2rem;
-  margin: 1rem;
+  margin: 1rem 0;
   border-radius: 8px;
   border: 1px solid var(--border);
+  transition: background .25s ease, color .25s ease, border .25s ease;
 }
 
-/* ---------- Buttons ---------- */
+h2 {
+  margin-bottom: 1rem;
+}
+
+#inventory-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#inventory-list li {
+  padding: .6rem;
+  margin-bottom: .4rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: background .25s ease;
+}
+
+/* ============================================================
+   Formular
+   ============================================================ */
+input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: .4rem;
+  display: block;
+  width: 100%;
+  margin-bottom: .8rem;
+  transition: background .25s ease, color .25s ease, border .25s ease;
+}
+
+#errorField {
+  margin-top: .4rem;
+  font-size: .9rem;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
 button {
   background: var(--btn-bg);
   color: var(--btn-text);
@@ -62,20 +127,23 @@ button {
   cursor: pointer;
   font-size: 15px;
   margin-top: .4rem;
+  transition: opacity .2s;
 }
 
 button:hover {
   opacity: 0.85;
 }
 
-/* ---------- Inputs ---------- */
-input {
-  background: var(--bg);
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
   color: var(--text);
-  border: 1px solid var(--border);
-  padding: 8px;
-  border-radius: 5px;
-  margin-top: 0.4rem;
-  display: block;
+  background: var(--header-bg);
+  border-top: 2px solid var(--border);
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
