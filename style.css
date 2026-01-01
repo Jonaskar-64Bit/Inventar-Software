@@ -147,3 +147,32 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+li img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#add-item-section {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#add-item-section.show {
+    display: block; /* notwendig, damit Inhalt sichtbar wird */
+    max-height: 500px; /* ausreichend groß, um alles anzuzeigen */
+}
+
