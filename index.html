@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen zur Inventar-Software</h1>
-        <img src="images/contrast-black.png" alt="Switch to dark mode" id="contrast-toggle">
-        <img src="images/contrast-white.png" alt="Switch to light mode" id="contrast-toggle-light" style="display:none;">
-    </header>
+<header>
+    <h1>3D-Druck Kostenrechner</h1>
+        <nav>
+        <button><a href="index.html">Inventar</a></button>
+        <button><a href="print-cost.html">3D Druck Kosten Rechner</a></button>
+    </nav>
+    <img src="images/contrast-black.png" alt="Dark Mode" id="contrast-toggle">
+    <img src="images/contrast-white.png" alt="Light Mode" id="contrast-toggle-light" style="display:none;">
+
+</header>
 
 
-    <button id="new-item-btn">Neuen Gegenstand hinzufügen</button>
+    <button id="new-item-btn">Neue Gegenstände hinzufügen</button>
 
     <main>
         <section id="inventory-section">
@@ -24,7 +29,8 @@
         </section>
 
         <section id="add-item-section">
-            <h2>Gegenstand hinzufügen</h2>
+            <div class="content">
+                            <h2>Gegenstand hinzufügen</h2>
             <form id="add-item-form">
                 <label for="item-name">Name des Gegenstands:</label>
                 <input type="text" id="item-name" name="item-name">
@@ -36,6 +42,7 @@
                 <br>
                 <p id="errorField"></p>
             </form>
+            </div>
         </section>
     </main>
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Druck Kostenrechner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>3D-Druck Kostenrechner</h1>
+    <nav>
+        <button><a href="index.html">Inventar</a></button>
+        <button><a href="print-cost.html">3D Druck Kosten Rechner</a></button>
+    </nav>
+    <div id="header-icons">
+        <img src="images/contrast-black.png" alt="Dark Mode" id="contrast-toggle">
+        <img src="images/contrast-white.png" alt="Light Mode" id="contrast-toggle-light" style="display:none;">
+        <img src="images/settings-white.png" alt="Einstellungen öffnen" id="settingsBtn">
+        <img src="images/settings-black.png" alt="Einstellungen schließen" id="settingsCloseBtn" style="display:none;">
+    </div>
+</header>
+
+<!-- Hauptbereich -->
+<main>
+    <h2>3D-Druck Kalkulator</h2>
+    <div id="calculator">
+        <label for="filamentSelect">Filamentprofil:</label>
+        <select id="filamentSelect"></select><br>
+
+        <label for="printerSelect">Druckerprofil:</label>
+        <select id="printerSelect"></select><br>
+
+        <label for="printWeight">Gewicht der Druckteile (g):</label>
+        <input type="number" id="printWeight" placeholder="z. B. 50"><br>
+
+        <label for="printTime">Druckzeit (h):</label>
+        <input type="number" id="printTime" placeholder="z. B. 2"><br>
+
+        <button id="calculateBtn">Kosten berechnen</button>
+        <p id="result"></p>
+    </div>
+</main>
+
+<!-- Einstellungsbereich -->
+<section id="settingsSection" style="display:none;">
+    <h2>Einstellungen</h2>
+
+    <div class="settings-block">
+        <h3>Filamentprofile</h3>
+        <input type="text" id="filamentName" placeholder="Filament Name">
+        <input type="number" id="filamentPrice" placeholder="Preis €/kg">
+        <button id="addFilamentBtn">Hinzufügen</button>
+        <ul id="filamentList"></ul>
+    </div>
+
+    <div class="settings-block">
+        <h3>Druckerprofile</h3>
+        <input type="text" id="printerName" placeholder="Drucker Name">
+        <input type="number" id="printerPower" placeholder="Stromverbrauch W">
+        <button id="addPrinterBtn">Hinzufügen</button>
+        <ul id="printerList"></ul>
+    </div>
+
+    <div class="settings-block">
+        <h3>Strompreis</h3>
+        <input type="number" id="electricityPrice" placeholder="€/kWh">
+        <button id="saveSettingsBtn">Speichern</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

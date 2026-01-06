@@ -166,18 +166,50 @@ li img:hover {
 
 #add-item-section {
     display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
 }
 
+
 #add-item-section.show {
-    display: block; /* notwendig, damit Inhalt sichtbar wird */
-    max-height: 500px; /* ausreichend groß, um alles anzuzeigen */
+    display: block;
 }
+
+#add-item-section .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    opacity: 0;
+}
+
+#add-item-section.show .content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+
 
 #new-item-btn {
     margin-left: 1rem; /* verschiebt den Button nach rechts */
     margin-top: 1rem;  /* optional, Abstand nach oben */
     padding: 10px 18px; /* optional, etwas größere Fläche für Klick */
 }
+
+/* ============================================================
+   3D-Druck Kostenrechner
+   ============================================================ */
+
+#print-result {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+#print-result p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+#print-result .highlight {
+    font-weight: bold;
+}
+
+
